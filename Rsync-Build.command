@@ -1,4 +1,8 @@
 #!/bin/bash
+# adam - 22/06/22
+
+#0 - Purge
+rm -vfr rsync-*
 
 #1 - Download Last 3.2.3 Version
 curl -O https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz
@@ -13,9 +17,12 @@ patch -p1 <patches/fileflags.diff
 #patch -p1 <patches/hfs-compression.diff # Broken since 3.1.3
 
 #3 - Build
-# args << "--disable-simd" if MacOS.version < :catalina
+# --disable-simd if macOS 10.15+ Build
 export CFLAGS="-mmacosx-version-min=10.6"
-./configure --with-included-popt=yes --with-included-zlib=no --enable-ipv6 --disable-debug --disable-openssl --disable-lz4 --disable-zstd --disable-xxhash --disable-simd
+./configure --with-included-popt=yes --with-included-zlib=no --enable-ipv6 \
+--disable-debug --disable-openssl --disable-lz4 --disable-zstd --disable-xxhash \
+--disable-simd
 
 make -j8
 mv rsync ~/Desktop/rsync
+rm -vfr rsync-*
