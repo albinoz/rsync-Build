@@ -1,18 +1,17 @@
 #!/bin/bash
-# adam - 22/06/22
+clear
+tput bold ; echo "adam | 2022-06-23" ; echo ; tput sgr0
 
-#0 - Purge
-rm -vfr rsync-*
 
-#1 - Download Last 3.2.3 Version
-curl -O https://download.samba.org/pub/rsync/src/rsync-3.2.3.tar.gz
-tar -zxvf rsync*
+#1 - Download Last Version
+curl -O https://download.samba.org/pub/rsync/src/rsync-3.2.4.tar.gz
+tar -zxvf rsync-*.tar.gz
 
 #2 - Patch FileFlags
-curl -O https://download.samba.org/pub/rsync/src/rsync-patches-3.2.3.tar.gz
-tar -zxvf ~/Desktop/rsync-patches-3.2.3.tar.gz
-rm rsync*.tar.gz
-cd rsync-3.2.3/
+curl -O https://download.samba.org/pub/rsync/src/rsync-patches-3.2.4.tar.gz
+tar -zxvf rsync-patches-*.tar.gz
+
+cd rsync-3.*/
 patch -p1 <patches/fileflags.diff
 #patch -p1 <patches/hfs-compression.diff # Broken since 3.1.3
 
@@ -25,4 +24,7 @@ export CFLAGS="-mmacosx-version-min=10.6"
 
 make -j8
 mv rsync ~/Desktop/rsync
-rm -vfr rsync-*
+rm -vfr ~/rsync-*
+
+tput bold ; echo ; echo "Time to Build" ; tput sgr0
+printf '%dh:%dm:%ds\n' $((SECONDS/3600)) $((SECONDS%3600/60)) $((SECONDS%60))
