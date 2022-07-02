@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
 tput bold ; echo "adam | 2022-06-23" ; echo ; tput sgr0
-
+THREADS=$(sysctl -n hw.ncpu)
 
 #1 - Download Last Version
 curl -O https://download.samba.org/pub/rsync/src/rsync-3.2.4.tar.gz
@@ -22,7 +22,7 @@ export CFLAGS="-mmacosx-version-min=10.6"
 --disable-debug --disable-openssl --disable-lz4 --disable-zstd --disable-xxhash \
 --disable-simd
 
-make -j8
+make -j "$THREADS"
 mv rsync ~/Desktop/rsync
 rm -vfr ~/rsync-*
 
