@@ -24,7 +24,7 @@ export CFLAGS="-mmacosx-version-min=10.6"
 
 make -j "$THREADS"
 mv rsync ~/Desktop/rsync
-rm -vfr ~/rsync-*
+rm -vfr ~/Desktop/rsync-*
 
 tput bold ; echo ; echo "Time to Build" ; tput sgr0
 printf '%dh:%dm:%ds\n' $((SECONDS/3600)) $((SECONDS%3600/60)) $((SECONDS%60))
