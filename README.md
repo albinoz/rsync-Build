@@ -1,5 +1,5 @@
 ## rsync-Build
-#### macOS 10.6 < 12
+#### macOS 10.6 < 14
 
 ```
 Capabilities:
