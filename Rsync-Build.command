@@ -4,11 +4,11 @@ tput bold ; echo "adam | 2022-06-23" ; echo ; tput sgr0
 THREADS=$(sysctl -n hw.ncpu)
 
 #1 - Download Last Version
-curl -O https://download.samba.org/pub/rsync/src/rsync-3.2.7.tar.gz
+curl -O https://download.samba.org/pub/rsync/src/rsync-3.3.0.tar.gz
 tar -zxvf rsync-*.tar.gz
 
 #2 - Patch FileFlags
-curl -O https://download.samba.org/pub/rsync/src/rsync-patches-3.2.7.tar.gz
+curl -O https://download.samba.org/pub/rsync/src/rsync-patches-3.3.0.tar.gz
 tar -zxvf rsync-patches-*.tar.gz
 
 cd rsync-3.*/
