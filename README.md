@@ -24,7 +24,7 @@ Daemon auth list:
 #### =-> Download & Execute :
 ```
 cd ~/Desktop && git clone https://github.com/albinoz/rsync-Build.git && \
-chmod 755 ~/Desktop/rsync-Build/rsync-Build.command  && \
+chmod +x ~/Desktop/rsync-Build/rsync-Build.command  && \
 ~/Desktop/rsync-Build/rsync-Build.command
 ```
 
