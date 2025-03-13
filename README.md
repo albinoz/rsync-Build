@@ -2,23 +2,23 @@
 #### macOS 10.10 < 14
 
 ```
-rsync version 3.3.0 protocol version 31
-Copyright (C) 1996-2024 by Andrew Tridgell, Wayne Davison, and others.
+rsync  version 3.4.1  protocol version 32
+Copyright (C) 1996-2025 by Andrew Tridgell, Wayne Davison, and others.
 Web site: https://rsync.samba.org/
 Capabilities:
-64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
-socketpairs, symlinks, symtimes, hardlinks, hardlink-specials,
-hardlink-symlinks, IPv6, atimes, batchfiles, inplace, append, ACLs,
-xattrs, optional secluded-args, iconv, no prealloc, stop-at, crtimes,
-file-flags
+    64-bit files, 64-bit inums, 64-bit timestamps, 64-bit long ints,
+    socketpairs, symlinks, symtimes, hardlinks, hardlink-specials,
+    hardlink-symlinks, IPv6, atimes, batchfiles, inplace, append, ACLs,
+    xattrs, optional secluded-args, iconv, no prealloc, stop-at, crtimes,
+    file-flags
 Optimizations:
-no SIMD-roll, no asm-roll, no openssl-crypto, no asm-MD5
+    no SIMD-roll, no asm-roll, no openssl-crypto, no asm-MD5
 Checksum list:
-md5 md4 none
+    md5 md4 none
 Compress list:
-zlibx zlib none
+    zlibx zlib none
 Daemon auth list:
-md5 md4
+    md5 md4
 ```
 
 #### =-> Download & Execute :
