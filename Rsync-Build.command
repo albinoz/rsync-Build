@@ -23,10 +23,10 @@ export LDFLAGS="-mmacosx-version-min=10.6"
 make -j "$THREADS"
 
 # Move & Remove
-cd
-mv ~/rsync-*/rsync ~/Desktop/rsync
-mv ~/Desktop/rsync-* ~/.Trash/
-mv ~/rsync-* ~/.Trash/
+#cd
+#mv ~/rsync-*/rsync ~/Desktop/rsync
+#mv ~/Desktop/rsync-* ~/.Trash/
+#mv ~/rsync-* ~/.Trash/
 
 tput bold ; echo ; echo "Time to Build" ; tput sgr0
 printf '%dh:%dm:%ds\n' $((SECONDS/3600)) $((SECONDS%3600/60)) $((SECONDS%60))
