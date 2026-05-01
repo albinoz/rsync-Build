@@ -1,5 +1,5 @@
 ## rsync-Build
-#### macOS 10.10 < 14
+#### macOS 10.6 < 14
 
 ```
 rsync  version 3.4.1  protocol version 32
